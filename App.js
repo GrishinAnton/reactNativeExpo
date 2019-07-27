@@ -4,7 +4,8 @@ import { Provider } from "react-redux";
 import HomeScreen from './screens/HomeScreen';
 
 const initialState = {
-  action: ""
+  action: "",
+  name: ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -14,8 +15,10 @@ const reducer = (state = initialState, action) => {
       return { action: "closeMenu" };
     case "OPEN_MENU":
       return { action: "openMenu" };
-    default: 
-      return state
+    case "UPDATE_NAME":
+      return { name: action.name };
+    default:
+      return state;
   }
 
 };
