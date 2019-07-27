@@ -7,10 +7,12 @@ import { NotificationIcon } from "./components/Icons";
 import Logo from "./components/Logo";
 import Course from "./components/Course";
 import { setRecoveryProps } from "expo/build/ErrorRecovery/ErrorRecovery";
+import Menu from "./components/Menu";
 
 export default function App() {
   return (
     <Container>
+      <Menu />
       <SafeAreaView>
         <ScrollView style={{ height: "100%" }}>
           <TitleBar>
